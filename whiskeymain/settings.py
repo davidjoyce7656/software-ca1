@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whiskeyshop',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
+
+LOGIN_REDIRECT_URL = 'whiskeyshop:home'
+LOGOUT_REDIRECT_URL = 'whiskeyshop:home'
