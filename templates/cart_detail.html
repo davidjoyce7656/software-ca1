@@ -1,32 +1,20 @@
-{% extends 'base.html' %}
+{% extends 'base_generic.html' %}
 
 {% block content %}
-<h2>Your Shopping Cart</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for item in cart %}
-        <tr>
-            <td>{{ item.whiskey.name }}</td>
-            <td>${{ item.price }}</td>
-            <td>{{ item.quantity }}</td>
-            <td>${{ item.total_price }}</td>
-            <td>
-                <a href="{% url 'cart_remove' item.whiskey.id %}" class="btn btn-danger btn-sm">Remove</a>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<h2>Your Cart</h2>
 
-<p><strong>Total:</strong> ${{ cart.get_total_price }}</p>
-<a href="#" class="btn btn-primary">Checkout</a>
+{% if cart.items.all %}
+    <ul>
+    {% for item in cart.items.all %}
+        <li>
+            {{ item.whiskey.name }} - Quantity: {{ item.quantity }}
+            <a href="{% url 'whiskeyshop:remove_from_cart' item.id %}">Remove</a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'whiskeyshop:empty_cart' %}">Empty Cart</a>
+{% else %}
+    <p>Your cart is empty.</p>
+{% endif %}
 {% endblock %}

@@ -132,3 +132,6 @@ LOGIN_REDIRECT_URL = 'whiskeyshop:home'
 LOGOUT_REDIRECT_URL = 'whiskeyshop:home'
 
 CART_SESSION_ID = 'cart'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
