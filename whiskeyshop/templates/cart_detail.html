@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Your Cart</h2>
+
+{% if cart.items.all %}
+    <ul>
+    {% for item in cart.items.all %}
+        <li>
+            {{ item.whiskey.name }} - Quantity: {{ item.quantity }}
+            <a href="{% url 'whiskeyshop:remove_from_cart' item.id %}">Remove</a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'whiskeyshop:empty_cart' %}">Empty Cart</a>
+{% else %}
+    <p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}
