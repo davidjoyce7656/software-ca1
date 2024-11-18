@@ -135,6 +135,6 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
-
-AUTH_USER_MODEL = 'accounts.CustomUser'
+CART_SESSION_ID = 'cart'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
