@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center">Our Whiskeys</h1>
+    <div class="row mt-4">
+        {% for whiskey in whiskeys %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="{{ whiskey.image.url }}" class="card-img-top" alt="{{ whiskey.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ whiskey.name }}</h5>
+                    <p class="card-text">{{ whiskey.description }}</p>
+                    <p class="card-text"><strong>${{ whiskey.price }}</strong></p>
+                    <a href="{% url 'cart_add' whiskey.id %}" class="btn btn-success btn-sm">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p class="text-center">No products available.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

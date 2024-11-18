@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whiskeyshop',
     'accounts',
+    
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,5 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = 'whiskeyshop:home'
 LOGOUT_REDIRECT_URL = 'whiskeyshop:home'
+
+CART_SESSION_ID = 'cart'
