@@ -19,7 +19,7 @@
   <body>
     <nav class="navbar navbar-custom">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'whiskeyshop:home' %}">Whiskey Company & Co.</a>
+            <a class="navbar-brand" href="{% url 'whiskeyshop:home' %}">The Brown Water Company</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -34,22 +34,25 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'whiskeyshop:home' %}">Home</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'whiskeyshop:home' %}">Home</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'whiskeyshop:whiskey_list' %}">Whiskey Products</a>
+                  </li>
                     {% if user.is_authenticated %}
                         <li class="nav-item">
                           <span class="nav-link">Welcome, {{ user.username }}</span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                            <a class="nav-link" href="{% url 'accounts:logout' %}">Log Out</a>
                         </li>
                     {% else %}
                         <!-- Show Log In link when user is not authenticated -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+                            <a class="nav-link" href="{% url 'accounts:signup' %}">Sign Up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'login' %}">Sign In</a>
+                            <a class="nav-link" href="{% url 'accounts:login' %}">Sign In</a>
                         </li>
                     {% endif %}
                     <li class="nav-item">
