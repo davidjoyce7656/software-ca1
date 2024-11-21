@@ -2,11 +2,23 @@
 {% load static %}
 {% block title %}Home{% endblock title %}
 {% block content %}
-    <h1>Homepage</h1>
-    <img src="{% static 'imgs/Logos/LOGO Jameson.jpg' %}" alt="">
-    <img src="{% static 'imgs/Logos/LOGO M&M.jpg' %}" alt="">
-    <img src="{% static 'imgs/Logos/LOGO midleton.jpg' %}" alt="">
-    <img src="{% static 'imgs/Logos/LOGO Powers.jpg' %}" alt="">
-    <img src="{% static 'imgs/Logos/LOGO Redbreast.jpg' %}" alt="">
-    <img src="{% static 'imgs/Logos/LOGO Spot.jpg' %}" alt="">
+    <h1 id="h1-center">Whiskey Deals</h1>
+    <table>
+        <tr>
+            <td>
+                <a href="{% url 'whiskeycellar:jameson' %}">
+                    <img class="icon-size" src="{% static 'imgs/Logos/LOGO Jameson.jpg' %}" alt="">
+                </a>
+                <img class="icon-size" src="{% static 'imgs/Logos/LOGO M&M.jpg' %}" alt="">
+                <img class="icon-size" src="{% static 'imgs/Logos/LOGO midleton.jpg' %}" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img class="icon-size" src="{% static 'imgs/Logos/LOGO Powers.jpg' %}" alt="">
+                <img class="icon-size" src="{% static 'imgs/Logos/LOGO Redbreast.jpg' %}" alt="">
+                <img class="icon-size" src="{% static 'imgs/Logos/LOGO Spot.jpg' %}" alt="">
+            </td>
+        </tr>
+    </table>
 {% endblock content %}
