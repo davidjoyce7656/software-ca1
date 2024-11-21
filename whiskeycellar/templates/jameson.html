@@ -3,10 +3,10 @@
 {% block content %}
 <h1 id="h1-center">Jameson Whiskey</h1>
 <div class="whiskey-grid">
-    {% for whiskey in all_whiskeys %}
+    {% for whiskey in jameson_whiskey %}
         {% if whiskey.brand.name == 'Jameson' %}
             <div class="whiskey-item">
-                <img id="whiskey-img" src="{{ whiskey.image.url }}" alt="{{ whiskey.name }}"> <!-- Display image if available -->
+                <img id="whiskey-img" src="{{ whiskey.image.url }}" alt="{{ whiskey.name }}"> 
                 <p class="whiskey-name">{{ whiskey.name }}</p>
                 <p>Brand: {{ whiskey.brand.name }}</p>
                 <p>Price: €{{ whiskey.price }}</p>
