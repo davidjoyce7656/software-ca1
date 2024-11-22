@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 id="h1-center">All Whiskeys</h1>
+<div class="whiskey-grid">
+    {% for whiskey in all_whiskeys %}
+            <div class="whiskey-item">
+                <img id="whiskey-img" src="{{ whiskey.image.url }}" alt="{{ whiskey.name }}"> 
+                <p class="whiskey-name">{{ whiskey.name }}</p>
+                <p>Brand: {{ whiskey.brand.name }}</p>
+                <p>Price: €{{ whiskey.price }}</p>
+            </div>
+    {% endfor %}
+</div>
+{% endblock %}

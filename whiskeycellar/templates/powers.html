@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 id="h1-center">Powers Whiskey</h1>
+<div class="whiskey-grid">
+    {% for whiskey in powers_whiskey %}
+        {% if whiskey.brand.name == 'Powers' %}
+            <div class="whiskey-item">
+                <img id="whiskey-img" src="{{ whiskey.image.url }}" alt="{{ whiskey.name }}"> <!-- Display image if available -->
+                <p class="whiskey-name">{{ whiskey.name }}</p>
+                <p>Brand: {{ whiskey.brand.name }}</p>
+                <p>Price: €{{ whiskey.price }}</p>
+                <p class="whiskey-description">{{ whiskey.description }}</p>
+            </div>
+        {% endif %}
+    {% empty %}
+        <p>No Powers whiskeys available.</p>
+    {% endfor %}
+</div>
+{% endblock %}
