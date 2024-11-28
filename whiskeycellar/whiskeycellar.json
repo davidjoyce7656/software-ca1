@@ -1,0 +1,241 @@
+[
+  {
+    "model": "whiskeycellar.whiskeybrand",
+    "pk": 1,
+    "fields": { "name": "Jameson" }
+  },
+  {
+    "model": "whiskeycellar.whiskeybrand",
+    "pk": 2,
+    "fields": { "name": "Method & Madness" }
+  },
+  {
+    "model": "whiskeycellar.whiskeybrand",
+    "pk": 3,
+    "fields": { "name": "Midleton" }
+  },
+  {
+    "model": "whiskeycellar.whiskeybrand",
+    "pk": 4,
+    "fields": { "name": "Powers" }
+  },
+  {
+    "model": "whiskeycellar.whiskeybrand",
+    "pk": 5,
+    "fields": { "name": "Red Breast" }
+  },
+  {
+    "model": "whiskeycellar.whiskeybrand",
+    "pk": 6,
+    "fields": { "name": "Spot" }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 1,
+    "fields": {
+      "name": "Jameson Black Barrel",
+      "brand": 1,
+      "description": "Triple Distilled Irish Whiskey\r\nWinner of the 2019 San Francisco World Spritis Competition (SFWSC) Double Gold medal.\r\n\r\nJameson Black Barrel Irish Whiskey is a blend of our traditional Irish pot still and rare small batch grain whiskeys, triple distilled and twice charred, for a rich smooth taste. Jameson Black Barrel is a tribute to our coopers, who painstakingly give their barrels an additional charring - an age-old method for invigorating barrels to intensify the taste and reveal their untold richness and complexity. The unique blend is then matured in a combination of American oak, sherry casks and double charred bourbon barrels. Time spent maturing in these double-charred barrels lends our whiskey a unique richness, with more intensified notes of vanilla sweetness and caramel, alongside toasted wood, fruit, and warm spice. Simply enjoy neat, poured over ice, or in any of your favourite whiskey cocktails.\r\n\r\nWe always like to say that everything you need to know about Jameson is right here - either on our bottle or in our bottle -encapsulating our full story. The label features our family crest and motto. Proclaiming �Sine Metu', it means �Without Fear'. It's the reason John Jameson first triple distilled Irish whiskey, creating Jameson Irish Whiskey as we know it. So in the spirit of Sine Metu, let us take you on a journey. Pull up a chair�\r\n\r\nEnergy 28 x 25ml\r\n25ml = 229kJ/55kcal\r\n100ml = 221kcal/915kJ\r\n\r\nJameson bottles are made using up to 80% recycled glass and are 100% recyclable. The Midleton Distillery where Jameson is produced has reduced energy consumption by 30% since 2010, and water consumption by 33% since 2011.\r\n\r\nThis timeless Whiskey is the perfect gift to offer for a Christmas present, or for anniversaries, birthdays, Father's Day, Mother�s Day and other special occasions.\r\n\r\nPack size: 70CL\r\n\r\nAlcohol Type\r\nSpirits\r\n\r\nNet Contents\r\n700ml\r\n\r\nThird Party Logos\r\nGreen Dot\r\n\r\nPreparation and Usage\r\nWhy not try making a Jameson Black Barrel Old Fashioned?\r\nIngredients:\r\n60ml Jameson Black Barrel\r\n5ml 2:1 Sugar Syrup\r\n2 Dashes Angostura Bitters\r\n3 Dashes Orange Bitters\r\nHow to mix: Fill a glass or jug with ice, add Jameson Black Barrel, Angostura Bitters and Orange Bitters. Stir until ice cold and strain into an ice-filled rocks glass. Garnish with an orange zest and tip in the slice.",
+      "price": "52.00",
+      "image": "whiskey_images/CA_Jameson_BB_fAjJfQ7.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 2,
+    "fields": {
+      "name": "Jameson Crested",
+      "brand": 1,
+      "description": "Product Description\r\n\r\nCrested Irish Whiskey\r\n\r\nA vivid blend of Pot Still and grain whiskeys, Jameson Crested's maturation process is heavily influenced by sherry casks, which infuse a robust, fruity character, subtle spice and chocolate notes, and delicate sherry undertones. All without losing any of Jameson' trademark triple distilled smoothness. Putting your name to something implies confidence, but a family crest speaks volumes. Triple distilled, once crested.\r\n\r\nJameson Crested received several awards during 2019, these included a double gold medal at the 2019 San Fancisco World Spirits Competition, a gold medal from TIWM & the Beverage Testing Institute.\r\n\r\nWe didn't always bottle our own whiskey but sold it in casks to bonders for bottling. In 1963 we took control of the whole process. Crested is a tribute to the first drops bottled by us and combines vivid sherry notes with hearty pot still spices\r\n\r\nTriple distilled\r\n\r\nPack size: 70CL\r\n\r\nAlcohol Type\r\nSpirits\r\n\r\nProduce of\r\nProduct of Ireland\r\n\r\nCountry\r\nIreland\r\n\r\nNet Contents\r\n700ml\r\n\r\nThird Party Logos\r\nGreen Dot\r\n\r\nPreparation and Usage\r\nWhy not try making a Jameson Crested & Soda?\r\nIngredients:\r\n50ml Jameson Crested Whiskey\r\nQuality bottled soda\r\nLarge wedge of orange\r\nHow To Make: Fill a high ball glass with ice, pour in a shot of Jameson Crested, top up the glass with a good quality bottled soda water, stir briefly to mix and garnish with an orange wedge.",
+      "price": "42.00",
+      "image": "whiskey_images/CA_Jameson_Crested.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 3,
+    "fields": {
+      "name": "Jameson Irish Whiskey",
+      "brand": 1,
+      "description": "Product Description\r\n\r\nTriple Distilled Irish Whiskey\r\nCustomers will receive one of the five limited edition bottles at random.\r\nJameson have teamed up with the EFL and Classic Football Shirts to immortalize some of the UK�s greatest away shirts on the front of our limited-edition bottles; this design is for all the Portsmouth fans out there.\r\nWinner of the 2018 Irish Whiskey Masters (TIWM) Gold award.\r\n\r\nJameson Irish whiskey is a triple-distilled blended Irish whiskey, as versatile as it is smooth. Whiskey like Jameson isn't just born smooth and balanced. First, we take the best of pot still and fine grain whiskeys. Then we triple distil them. Not because we have to, because we want to. This gives Jameson its signature smoothness. This tradition began in 1780 with John Jameson, and we continue his legacy to this day. Finally, we age our whiskey in oak casks for a minimum of 4 years. The result? A unique whiskey with a perfect balance of spicy, nutty and vanilla notes with hints of sweet sherry. Simply enjoy neat, poured over ice, or in any of your favourite whiskey cocktails.\r\n\r\nWe always like to say that everything you need to know about Jameson is right here - either on our bottle or in our bottle - encapsulating our full story. The label features our family crest and motto. Proclaiming �Sine Metu', it means �Without Fear'. It's the reason John Jameson first triple distilled Irish whiskey, creating Jameson Irish Whiskey as we know it. So in the spirit of Sine Metu, let us take you on a journey. Pull up a chair�\r\n\r\nJameson bottles are made using up to 80% recycled glass and are 100% recyclable. The Midleton Distillery where Jameson is produced has reduced energy consumption by 30% since 2010, and water consumption by 33% since 2011.\r\n\r\nThis timeless Irish Whiskey is the perfect gift to offer for a birthday present, or for anniversaries, Father's Day, Mother�s Day, Christmas and other special occasions.\r\n\r\nPack size: 70CL\r\n\r\nAlcohol Type\r\nSpirits\r\n\r\nCountry\r\nIreland\r\n\r\nNet Contents\r\n700ml\r\n\r\nThird Party Logos\r\nGreen Dot\r\n\r\nPreparation and Usage\r\nWhy not try making the classic Jameson, Ginger & Lime? It's a thirst quencher that couldn't be easier to make!\r\nIngredients:\r\n50ml Jameson Irish whiskey\r\n1 bottle ginger ale\r\n1 lime\r\nHow to mix: Fill a high ball glass with ice, pour in a shot of Jameson, top up the glass with a good quality bottled ginger ale, stir briefly to mix, take a large wedge of lime, give it a squeeze and drop it into the glass. Roughly 1 part Jameson to 3 parts ginger ale, all parts refreshing.",
+      "price": "32.50",
+      "image": "whiskey_images/CA_Jameson.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 4,
+    "fields": {
+      "name": "Method & Madness 28YO",
+      "brand": 2,
+      "description": "Single Pot Still and a single Ruby Port Pipe don�t meet every day. But 28 years ago, we posited a theory that the two could harmonise quite nicely over time. Theory confirmed, as you�ll see upon first sip.\r\n\r\nThis Limited Edition release is a �World- First� for Irish Whiskey; a Single Pot Still Irish Whiskey aged for 6 years in Bourbon Barrels and then re-casked for a further 22 Years in a Ruby Port Cask.",
+      "price": "2000.00",
+      "image": "whiskey_images/CA_MM_28.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 5,
+    "fields": {
+      "name": "Method & Madness Single Grain",
+      "brand": 2,
+      "description": "Single Grain Irish Whiskey\r\n\r\nSprung from the minds of masters and apprentices, Method and Madness is whiskey that pays heed to tradition, while searching for unordinary. This release asked the question: How will virgin Spanish oak affect a light single grain whiskey? Without giving too much away, the two made very good partners, offering a perfect mix of wood spice playing off the natural sweetness of the grain.\r\n\r\nNose: New pencil shavings, light rose petal and fresh rain on pine\r\nTaste: Warm toasted oak, fresh peeled grapefruit and zesty wood spices\r\nFinish: Sweet cereal, clove spiciness and fresh mint\r\n\r\nMatured in bourbon barrels\r\nFinished in virgin Spanish oak casks\r\nNon chill filtered",
+      "price": "54.00",
+      "image": "whiskey_images/CA_MM_SG.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 6,
+    "fields": {
+      "name": "Method & Madness Single Pot Still",
+      "brand": 2,
+      "description": "Method and Madness Single Pot Still Irish Whiskey has been matured in a combination of ex-oloroso Sherry and ex-Bourbon barrels before being transferred to chestnut casks sourced from the Is�re region in France.\r\n\r\nMethod and Madness reinforces Irish Distillers� �continued commitment� to experimentation and innovation at the Midleton Distillery.",
+      "price": "74.00",
+      "image": "whiskey_images/CA_MM_SPS.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 7,
+    "fields": {
+      "name": "Midleton Dair Ghaelach",
+      "brand": 3,
+      "description": "Midleton Dair Ghaelach, which means quite simply, Irish oak, is the result of a six-year exploration by the Midleton Masters into using native oak to mature Irish whiskey.\r\n\r\nLed by then Master of Maturation, Kevin O�Gorman, the two prerequisites for the project were to source Irish oak in a sustainable way, viable for the long-term, and to craft a new and outstanding style of Single Pot Still Irish Whiskey.\r\n\r\nThis whiskey is a range of releases that have been matured in barrels made from virgin Irish oak from particular forests across Ireland. The oak selected for each release influences this special whiskey with the true and unique flavour of Ireland.\r\n\r\nIts provenance told in each sublime sip, this is the tale of our native oak striking harmony with the classically rich and spicy Single Pot Still Irish Whiskey character. This is a whiskey like no other.\r\n\r\nThe story of each bottle of Midleton Dair Ghaelach can be traced right back to the very oak trees that helped to create its refined and unmistakable taste.\r\n\r\nMidleton Dair Ghaelach is non-chill filtered, cask strength and natural colour.\r\n\r\nDistilled, matured and bottled by Midleton Distillery, Co. Cork, Ireland.",
+      "price": "440.00",
+      "image": "whiskey_images/CA_Midleton_DG.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 8,
+    "fields": {
+      "name": "Midleton Very Rare 2023",
+      "brand": 3,
+      "description": "The latest chapter of this renowned collection is adorned with the signature of our Master Distiller, Kevin O�Gorman. After months of exploration, O�Gorman crafted a balanced blend of rare and hand-selected single pot still and single grain Irish whiskeys from Midleton�s exclusive inventory to create this truly special release.",
+      "price": "285.00",
+      "image": "whiskey_images/CA_Midleton_VR.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 9,
+    "fields": {
+      "name": "POWERS Irish Whiskey Gold Label",
+      "brand": 4,
+      "description": "Product Description\r\n\r\nGold Label\r\n\r\nA unique 'narrow cut' gold liquid. Bold character. Precious centre cut. This is the original expression of Powers Irish whiskey. A process of passion poured into every bottle. A distinctive bold flavour awaits.\r\n\r\nNon-Chill Filtered\r\nFull Flavour\r\nTriple Distilled\r\nBold Flavour from the Heart",
+      "price": "30.00",
+      "image": "whiskey_images/Powers_G.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 10,
+    "fields": {
+      "name": "Powers John's Lane",
+      "brand": 4,
+      "description": "Created in celebration of the original style of Powers whiskey, John's Lane is a 12-year-old single pot still that's full of character. Matured in a combination of bourbon and oloroso sherry casks, it's robust and full-flavoured with rich spice notes and a honeyed, toasted oak finish.\r\n\r\nComplex spicy and fruity aromas with toasted wood notes. Full flavoured and silky smooth on the palate with a balance of spicy, fruity, sherry and toasted flavours and a lingering finish.",
+      "price": "70.00",
+      "image": "whiskey_images/Powers_JL_CS.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 11,
+    "fields": {
+      "name": "Powers '3 Swallow' Release",
+      "brand": 4,
+      "description": "A revival of the old style Powers single pot whiskey, Three Swallow is a modern take on what the original Powers whiskey tasted like back in the days of the John�s Lane distillery in Dublin. It's triple distilled in traditional copper pot stills and primarily matured in American bourbon barrels.\r\n\r\nPowers Three Swallow was awarded a Master medal at the Irish Whiskey Masters 2023.\r\n\r\nOrange peel and ripe pear on the nose with sweet spice and sherry notes. Robust and smooth on the palate with butterscotch and tropical fruits backed up by raisins and spice and a fruity finish with wood and spice notes.",
+      "price": "38.00",
+      "image": "whiskey_images/Powers_JL.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 12,
+    "fields": {
+      "name": "Powers Irish Rye",
+      "brand": 4,
+      "description": "This latest addition to the Powers line up is the first 100% Irish Rye whiskey. Balancing the trademark peppery taste of rye with a sweetness courtesy of seasoned American oak casks, it�s full of character and is the perfect choice for whiskey cocktails.\r\n\r\nAromas of burnt orange, maraschino cherries with rich warming notes of freshly baked rye bread, followed by sweet vanilla and earthy sugar cane notes. On the palate flavours of candied ginger, caramelised apples, and sweet cereal build, while the vanilla and charred oak influences work in balance with the rye signature spice.",
+      "price": "38.00",
+      "image": "whiskey_images/Powers_Rye.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 13,
+    "fields": {
+      "name": "Redbreast 12",
+      "brand": 5,
+      "description": "A frequent award-winner, Redbreast 12 Year Old is a consistent favourite among many whiskey fans both in Ireland and beyond. It�s a rich and complex 100% pot still whiskey, made from a mash of malted and unmalted barley and triple distilled in copper pot stills. Time spent in bourbon and sherry casks give it spicy, fruit notes and a distinctive sherry style. It�s a complex, full flavoured whiskey but, as its popularity suggests, it�s not just one for the experts.\r\n\r\n\r\nComplex spicy and fruity aromas with toasted wood notes. Full flavoured and silky smooth on the palate with a balance of spicy, fruity, sherry and toasted flavours and a lingering finish.",
+      "price": "65.00",
+      "image": "whiskey_images/RB_12.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 14,
+    "fields": {
+      "name": "Redbreast 27 Year Old",
+      "brand": 5,
+      "description": "Redbreast 27 Year Old will be the oldest permanent expression ever released, making it the new icon of the Redbreast family.Building on the celebrated foundation of bourbon and sherry casks, the inclusion of ruby port casks brings even more complexity and depth. Nearly three decades in the shaping, this cask strenght Redbreast is a joy to behold in each and evey bottle.",
+      "price": "570.00",
+      "image": "whiskey_images/RB_27.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 15,
+    "fields": {
+      "name": "Redbreast Lustau",
+      "brand": 5,
+      "description": "Initially matured in traditional bourbon and sherry casks for a period of 9-12 years. It is then finished for 1 additional, year in first fill sherrybutts that have been seasoned with the Oloroso sherry from the prestigious Bodegas Lustau in Jerez.",
+      "price": "82.00",
+      "image": "whiskey_images/RB_Lustau.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 16,
+    "fields": {
+      "name": "Redbreast Iberian Series PX",
+      "brand": 5,
+      "description": "This former limited edition single post still whiskey is now a permanent member of the acclaimed Redbreast Iberian Series. Triple distilled, it was initially matured in bourbon and oloroso sherry casks before being re-casked in Pedro Xim�nez hogsheads from the south of Spain. It's a beautiful balance of fruit, spice and toasted notes complemented by a rich, sweet finish.",
+      "price": "95.00",
+      "image": "whiskey_images/RB_PX.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 17,
+    "fields": {
+      "name": "Yellow Spot Whiskey",
+      "brand": 6,
+      "description": "A favourite among whiskey lovers, Yellow Spot is complex and sophisticated. It contains single pot still whiskey that has been matured for a full 12 year period in three oak cask types: American bourbon barrels, Spanish sherry butts and, uniquely, Spanish Malaga casks which bring an exotic sweet note to the whiskey.\r\n\r\nTasting Note\r\n\r\nAromas of mown hay, red bell peppers and clove oil, with honey and peach from the Malaga casks. Coffee and milk chocolate flavours follow with notes of red apples and toasted oak and a sweet, complex finish.",
+      "price": "85.00",
+      "image": "whiskey_images/SP_Yellow.jpg"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 18,
+    "fields": {
+      "name": "Green Spot Chateau Montelena",
+      "brand": 6,
+      "description": "From the acclaimed Spot whiskey stable, Green Spot Chateau Montelena is a result of a collaboration with California�s Chateau Montelena. Initially matured in traditional sherry and bourbon casks, this single malt pot still whiskey has been finished for 12 months in French oak Zinfandel casks, adding layers of flavour and character. It was awarded Master Single Pot Still � Premium at The Irish Whiskey Masters 2023.",
+      "price": "70.00",
+      "image": "whiskey_images/SW_Green.png"
+    }
+  },
+  {
+    "model": "whiskeycellar.whiskey",
+    "pk": 19,
+    "fields": {
+      "name": "Red Spot 15 Year Old Single Pot Still",
+      "brand": 6,
+      "description": "A whiskey that has been matured in a combination of American Bourbon casks, Sherry butts and Sicilian Marsala wine casks. Its name originates from the Mitchell family's whiskey bonding business, whereby different casks would be marked with a spot of paint, such as; Blue Spot, Green Spot, Yellow Spot & Red Spot. Until now, this whiskey had yet to be revived, however, it gives us great pleasure to welcome its return.",
+      "price": "140.00",
+      "image": "whiskey_images/SW_Red.jpg"
+    }
+  }
+]
