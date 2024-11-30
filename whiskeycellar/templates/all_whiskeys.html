@@ -5,7 +5,9 @@
 <div class="whiskey-grid">
     {% for whiskey in all_whiskeys %}
             <div class="whiskey-item">
-                <img id="whiskey-img" src="{{ whiskey.image.url }}" alt="{{ whiskey.name }}"> 
+                <a href="{% url 'whiskeycellar:product_detail' product_id=whiskey.id %}">
+                    <img id="whiskey-img" src="{{ whiskey.image.url }}" alt="{{ whiskey.name }}"> 
+                </a>
                 <p class="whiskey-name">{{ whiskey.name }}</p>
                 <p>Brand: {{ whiskey.brand.name }}</p>
                 <p>Price: €{{ whiskey.price }}</p>

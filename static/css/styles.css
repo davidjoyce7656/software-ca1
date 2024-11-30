@@ -56,8 +56,9 @@
 }
 
 #whiskey-img {
-    width: 173.74px;
-    height: 263.16px;
+    width: 200px; 
+    height: 300px;
+    object-fit: cover; 
 }
 
 .whiskey-name {

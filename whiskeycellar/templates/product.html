@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block metadescription %}
+    {{ whiskey.description|truncatewords:155 }}
+{% endblock %}
+{% block title %}
+    {{ whiskey.name }} - The Brown Water Company
+{% endblock %}
+{% block content %}
+    <div class="row my_prod_row_class">
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+                    <div style="min-width:18rem;">
+                        <img id="whiskey-img" src="{{whiskey.image.url}}" alt="{{whiskey.name}}">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                    <div>
+                        <h1 class="my_prod_title">{{whiskey.name}}</h1>
+                        <p>€{{whiskey.price}}</p>
+                        <p class="my_title">Product Description</p>
+                        <p class="text-justify my_prod_text">{{whiskey.description}}</p>
+                        <p class="my_title">Nose</p>
+                        <p class="text-justify my_prod_text">{{ whiskey.nose }}</p>
+                        <p class="my_title">Taste</p>
+                        <p class="text-justify my_prod_text">{{whiskey.taste}}</p>
+                        <p class="my_title">Finish</p>
+                        <p class="text-justify my_prod_text">{{whiskey.finish}}</p>
+                        <p class="my_title">ABV</p>
+                        <p class="text-justify my_prod_text">{{whiskey.abv}}%</p>
+                        <p class="my_title">Amount</p>
+                        <p class="text-justify my_prod_text">{{whiskey.amount}}</p>
+                        <p class="my_title">Distillery</p>
+                        <p class="text-justify my_prod_text">{{whiskey.distillery}}</p>
+                        {% if whiskey.stock == 0%}
+                            <p class="text-justify my_prod_text"><b>Out of Stock</b></p>
+                        {% else %}
+                            <a class="btn btn-secondary" href="{% url 'cart:add_cart' whiskey.id %}">Add to Cart</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import AllWhiskeysPageView, JamesonPageView, MandMPageView, MidletonPageView, PowersPageView, RedBreastPageView, SpotPageView
+from . import views
 
 app_name = 'whiskeycellar'
 
@@ -10,5 +11,6 @@ urlpatterns = [
     path('midleton/', MidletonPageView.as_view(), name='midleton'),
     path('powers/', PowersPageView.as_view(), name='powers'),
     path("red_breast/", RedBreastPageView.as_view(), name='red_breast'),
-    path("spot/", SpotPageView.as_view(), name='spot')
+    path("spot/", SpotPageView.as_view(), name='spot'),
+    path("product_detail/<int:product_id>/", views.product_detail, name='product_detail'),
 ]

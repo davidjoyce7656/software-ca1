@@ -6,17 +6,19 @@
     {% for whiskey in powers_whiskey %}
         {% if whiskey.brand.name == 'Powers' %}
             <div class="whiskey-item">
-                <img id="whiskey-img" src="{{ whiskey.image.url }}" alt="{{ whiskey.name }}"> <!-- Display image if available -->
+                <a href="{% url 'whiskeycellar:product_detail' product_id=whiskey.id %}">
+                    <img id="whiskey-img" src="{{ whiskey.image.url }}" alt="{{ whiskey.name }}"> 
+                </a>
                 <p class="whiskey-name">{{ whiskey.name }}</p>
-                <p>Brand: {{ whiskey.brand.name }}</p>
-                <p>Price: €{{ whiskey.price }}</p>
+                <p><b>Brand: </b>{{ whiskey.brand.name }}</p>
+                <p><b>Price: </b>€{{ whiskey.price }}</p>
                 <p class="whiskey-description">{{ whiskey.description }}</p>
-                <p>Nose: {{ whiskey.nose }}</p>
-                <p>Taste: {{ whiskey.taste }}</p>
-                <p>Finish: {{ whiskey.finish }}</p>
-                <p>ABV: {{ whiskey.abv }}</p>
-                <p>Amount: {{ whiskey.amount }}</p>
-                <p>Distillery: {{ whiskey.amount }}</p>
+                <p><b>Nose: </b>{{ whiskey.nose }}</p>
+                <p><b>Taste: </b>{{ whiskey.taste }}</p>
+                <p><b>Finish: </b>{{ whiskey.finish }}</p>
+                <p><b>ABV: </b>{{ whiskey.abv }}%</p>
+                <p><b>Amount: </b>{{ whiskey.amount }}</p>
+                <p><b>Distillery: </b>{{ whiskey.distillery }}</p>
             </div>
         {% endif %}
     {% empty %}
