@@ -118,3 +118,72 @@
     width: 100%; 
     margin-bottom: 10px;
 }
+
+.hero-section {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+#h1-center {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Whiskey Brands Section */
+.whiskey-brands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 10%;
+}
+
+.section-title {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+}
+
+.section-description {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.brand-list {
+    font-size: 1.1em;
+    color: #444;
+    list-style-type: none;
+    padding: 0;
+}
+
+.brand-list li {
+    margin-bottom: 10px;
+}
+
+.cta-description {
+    font-size: 1.1em;
+    color: #444;
+    text-align: center;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .brand-list {
+        font-size: 1em;
+    }
+}

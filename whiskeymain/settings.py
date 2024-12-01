@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'whiskeycellar',
     'accounts',
     'cart',
+    'order',
     #3rd Party
     'crispy_forms',
     'crispy_bootstrap5',

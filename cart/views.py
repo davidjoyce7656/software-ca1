@@ -5,6 +5,9 @@ from .models import Cart, CartItem
 from django.core.exceptions import ObjectDoesNotExist
 from django.conf import settings
 from django.urls import reverse
+from order.models import Order, OrderItem
+from stripe import StripeError
+
 
 def _cart_id(request):
     cart = request.session.session_key
@@ -60,7 +63,7 @@ def cart_detail(request, total=0, counter=0, cart_items = None):
         billing_address_collection='required', 
                 shipping_address_collection={},
                 payment_intent_data={'description': description},
-                success_url=request.build_absolute_uri(reverse('whiskeycellar:all_whiskeys')), 
+                success_url=request.build_absolute_uri(reverse('cart:new_order'))+ f"?session_id={{CHECKOUT_SESSION_ID}}",
                 cancel_url=request.build_absolute_uri(reverse('cart:cart_detail')),    
             )
             # Redirect to Stripe Checkout
@@ -97,3 +100,95 @@ def full_remove(request, product_id):
     cart_item = CartItem.objects.get(product=product, cart=cart)
     cart_item.delete()
     return redirect('cart:cart_detail')
+
+def empty_cart(request):
+    try:
+        cart = Cart.objects.get(cart_id=_cart_id(request))
+        cart_items = CartItem.objects.filter(cart=cart, active=True)
+        cart_items.delete()  
+        cart.delete()
+        return redirect('whiskeycellar:all_whiskeys')
+    except Cart.DoesNotExist:
+        pass
+    return redirect('cart:cart_detail')
+
+
+def create_order(request):
+    try:
+        session_id = request.GET.get('session_id')
+        if not session_id:
+            raise ValueError("Session ID not found.")
+
+        try:
+            session = stripe.checkout.Session.retrieve(session_id)
+        except StripeError as e:
+            return redirect("whiskeycellar:all_whiskeys") 
+
+        customer_details = session.customer_details
+        if not customer_details or not customer_details.address:
+            raise ValueError("Missing information in the Stripe session.")
+
+        billing_address = customer_details.address
+        billing_name = customer_details.name
+        shipping_address = customer_details.address
+        shipping_name = customer_details.name
+
+        try:
+            order_details = Order.objects.create(
+                token=session.id,
+                total=session.amount_total / 100,  # Convert cents to currency units
+                emailAddress=customer_details.email,
+                billingName=billing_name,
+                billingAddress1=billing_address.line1,
+                billingCity=billing_address.city,
+                billingPostcode=billing_address.postal_code,
+                billingCountry=billing_address.country,
+                shippingName=shipping_name,
+                shippingAddress1=shipping_address.line1, 
+                shippingCity=shipping_address.city, 
+                shippingPostcode=shipping_address.postal_code,
+                shippingCountry=shipping_address.country,
+            )
+            order_details.save()
+        except Exception as e: 
+            print(f"Error: {e}")
+            return redirect("whiskeycellar:all_whiskeys") 
+
+        try:
+            cart = Cart.objects.get(cart_id=_cart_id(request))
+            cart_items = CartItem.objects.filter(cart=cart, active=True)
+        except ObjectDoesNotExist:
+            return redirect("whiskeycellar:all_whiskeys")  
+        except Exception as e:
+            print(f"Error: {e}")
+            return redirect("whiskeycellar:all_whiskeys")  
+
+        for item in cart_items:
+            try:
+                oi = OrderItem.objects.create(
+                    product=item.product.name,
+                    quantity=item.quantity,
+                    price=item.product.price,
+                    order=order_details
+                )
+                oi.save()
+                '''Reduce stock when order is placed or saved'''
+                product = Whiskey.objects.get(id=item.product.id)
+                product.stock = int(item.product.stock - item.quantity)
+                product.save()
+                empty_cart(request)
+            except Exception as e:
+                return redirect("whiskeycellar:all_whiskeys")  
+        return redirect('order:thanks', order_details.id)
+
+    except ValueError as ve:
+        print(f"Error: {ve}")
+        return redirect("whiskeycellar:all_whiskeys")  
+
+    except StripeError as se:
+        print(f"Stripe Error: {se}")
+        return redirect("whiskeycellar:all_whiskeys") 
+
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        return redirect("whiskeycellar:all_whiskeys") 
