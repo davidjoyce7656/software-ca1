@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     #3rd Party
     'crispy_forms',
     'crispy_bootstrap5',
+    'contact'
 ]
 
 MIDDLEWARE = [
@@ -149,3 +150,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 AUTH_USER_MODEL = "accounts.CustomUser"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'  
+EMAIL_PORT = 1025
+DEFAULT_FROM_EMAIL = 'x00212094@mytudublin.ie'
