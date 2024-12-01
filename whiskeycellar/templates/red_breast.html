@@ -7,7 +7,7 @@
         {% if whiskey.brand.name == 'Red Breast' %}
             <div class="whiskey-item">
                 <a href="{% url 'whiskeycellar:product_detail' product_id=whiskey.id %}">
-                    <img id="whiskey-img" src="{{ whiskey.image.url }}" alt="{{ whiskey.name }}"> 
+                    <img id="whiskey-img-logo" src="{{ whiskey.image.url }}" alt="{{ whiskey.name }}"> 
                 </a>
                 <p class="whiskey-name">{{ whiskey.name }}</p>
                 <p><b>Brand: </b>{{ whiskey.brand.name }}</p>

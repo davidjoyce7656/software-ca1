@@ -56,10 +56,18 @@
 }
 
 #whiskey-img {
-    width: 200px; 
-    height: 300px;
+    margin-top: 10em;
+    width: 300px; 
+    height: auto;
     object-fit: cover; 
 }
+
+#whiskey-img-logo {
+    width: 30%; 
+    height: auto;
+    object-fit: cover; 
+}
+
 
 .whiskey-name {
     font-size: 1.2em;
@@ -96,4 +104,17 @@
 }
 .my_custom_button {
 	margin-top: 5px;
+}
+
+/***Stripe Button***/
+.my_custom_button_stripe {
+    background-color: #6772e5 !important; 
+    color: white;
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    text-align: center; 
+    text-decoration: none; 
+    width: 100%; 
+    margin-bottom: 10px;
 }

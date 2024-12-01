@@ -130,7 +130,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATIC_URL = '/static/css/'
+# STATIC_URL = '/static/css/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
@@ -140,6 +140,9 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+STRIPE_SECRET_KEY = 'sk_test_51QKHOoP2iEmOLe9TDVXYU7MebGSOvAyCHzXsswFpr52ywnTC6uj9WawuIpKiZV8qUrjIQjyrjLBUR19WNmcU1pkB00UDtGuoLh'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51QKHOoP2iEmOLe9TYfB2OCMT7U8VkxflnEpj6bPcucyQrQCLWm3sQh8fyPlJyg5wt32BuUfRkT36WFs1YXqGX6Yn00PhkfhKE1'
 
 CART_SESSION_ID = 'cart'
 MEDIA_URL = '/media/'
