@@ -20,19 +20,17 @@
                     <div>
                         <h1 class="my_prod_title">{{whiskey.name}}</h1>
                         <p>€{{whiskey.price}}</p>
-                        <p class="my_title">Product Description</p>
-                        <p class="text-justify my_prod_text">{{whiskey.description}}</p>
-                        <p class="my_title">Nose</p>
+                        <p class="my_title"><b>Nose</b></p>
                         <p class="text-justify my_prod_text">{{ whiskey.nose }}</p>
-                        <p class="my_title">Taste</p>
+                        <p class="my_title"><b>Taste</b></p>
                         <p class="text-justify my_prod_text">{{whiskey.taste}}</p>
-                        <p class="my_title">Finish</p>
+                        <p class="my_title"><b>Finish</b></p>
                         <p class="text-justify my_prod_text">{{whiskey.finish}}</p>
-                        <p class="my_title">ABV</p>
+                        <p class="my_title"><b>ABV</b></p>
                         <p class="text-justify my_prod_text">{{whiskey.abv}}%</p>
-                        <p class="my_title">Amount</p>
+                        <p class="my_title"><b>Amount</b></p>
                         <p class="text-justify my_prod_text">{{whiskey.amount}}</p>
-                        <p class="my_title">Distillery</p>
+                        <p class="my_title"><b>Distillery</b></p>
                         <p class="text-justify my_prod_text">{{whiskey.distillery}}</p>
                         {% if whiskey.stock == 0%}
                             <p class="text-justify my_prod_text"><b>Out of Stock</b></p>

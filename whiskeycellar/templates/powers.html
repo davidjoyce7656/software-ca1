@@ -12,13 +12,8 @@
                 <p class="whiskey-name">{{ whiskey.name }}</p>
                 <p><b>Brand: </b>{{ whiskey.brand.name }}</p>
                 <p><b>Price: </b>€{{ whiskey.price }}</p>
-                <p class="whiskey-description">{{ whiskey.description }}</p>
-                <p><b>Nose: </b>{{ whiskey.nose }}</p>
-                <p><b>Taste: </b>{{ whiskey.taste }}</p>
-                <p><b>Finish: </b>{{ whiskey.finish }}</p>
-                <p><b>ABV: </b>{{ whiskey.abv }}%</p>
-                <p><b>Amount: </b>{{ whiskey.amount }}</p>
-                <p><b>Distillery: </b>{{ whiskey.distillery }}</p>
+                <p class="my_title"><b>Product Description</b></p>
+                <p class="text-justify my_prod_text">{{whiskey.description}}</p>
             </div>
         {% endif %}
     {% empty %}
