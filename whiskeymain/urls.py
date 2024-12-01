@@ -26,6 +26,7 @@ urlpatterns = [
     path('', include('whiskeyshop.urls')),
     path('', include('whiskeycellar.urls')),
     path('cart/', include('cart.urls')),
+    path('', include('contact.urls')),
 ]
 
 if settings.DEBUG:
